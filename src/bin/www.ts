@@ -6,7 +6,9 @@
 
 import { createServer } from 'http';
 import debug from 'debug';
+
 import app from '../app';
+import { port as rawPort } from '../config';
 import { name } from '../../package.json';
 
 const debugServer = debug(`${name}:server`);
@@ -15,7 +17,7 @@ const debugServer = debug(`${name}:server`);
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(rawPort);
 app.set('port', port);
 
 /**
