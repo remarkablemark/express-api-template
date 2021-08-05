@@ -10,7 +10,9 @@
     "lint:tsc": "tsc --noEmit",
     "postinstall": "husky install",
     "release": "standard-version --no-verify",
-    "start": "NODE_ENV=production ts-node --transpile-only src/bin/www.ts"
+    "start": "NODE_ENV=production ts-node --transpile-only src/bin/www.ts",
+    "test": "jest --watch",
+    "test:ci": "CI=true jest --coverage --colors"
   },
   "dependencies": {
     "cookie-parser": "^1.4.5",

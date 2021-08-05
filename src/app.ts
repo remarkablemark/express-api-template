@@ -4,7 +4,7 @@ import logger from 'morgan';
 
 import type { ErrorRequestHandler } from 'express';
 
-import { isProduction } from './config';
+import { isProduction, isTest } from './config';
 import indexRouter from './routes/index';
 
 const app = express();
@@ -12,7 +12,8 @@ const app = express();
 /**
  * Middleware.
  */
-app.use(logger(isProduction ? 'combined' : 'dev'));
+/* istanbul ignore next */
+app.use(logger(isProduction ? 'combined' : 'dev', { skip: () => isTest }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
