@@ -4,7 +4,6 @@ import logger from 'morgan';
 
 import { isProduction } from './config';
 import indexRouter from './routes/index';
-import usersRouter from './routes/users';
 
 const app = express();
 
@@ -14,6 +13,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
+/**
+ * 404 Not Found
+ */
+app.use((request, response) => {
+  response.status(404).send('Not Found');
+});
 
 export default app;
