@@ -5,8 +5,8 @@ const router = Router();
 /**
  * GET /
  */
-router.get('/', (req, res) => {
-  res.send('OK');
+router.get('/', (request, response) => {
+  response.send('OK');
 });
 
 export default router;
