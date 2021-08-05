@@ -9,7 +9,7 @@
     "lint:tsc": "tsc --noEmit",
     "postinstall": "husky install",
     "release": "standard-version --no-verify",
-    "start": "DEBUG=express-api-template:* node ./bin/www"
+    "start": "DEBUG=express-api-template:* node src/bin/www"
   },
   "dependencies": {
     "cookie-parser": "^1.4.5",
