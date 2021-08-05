@@ -1,5 +1,6 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 import logger from 'morgan';
 
 import type { ErrorRequestHandler } from 'express';
@@ -17,6 +18,7 @@ app.use(logger(isProduction ? 'combined' : 'dev', { skip: () => isTest }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors());
 
 /**
  * Routes.
