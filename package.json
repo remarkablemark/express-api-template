@@ -4,12 +4,13 @@
   "description": "Express API template.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
+    "dev": "DEBUG=express-api-template:* nodemon src/bin/www.ts",
     "lint": "eslint --ext .js,.ts .",
     "lint:fix": "yarn lint --fix",
     "lint:tsc": "tsc --noEmit",
     "postinstall": "husky install",
     "release": "standard-version --no-verify",
-    "start": "DEBUG=express-api-template:* nodemon src/bin/www.ts"
+    "start": "NODE_ENV=production ts-node --transpile-only src/bin/www.ts"
   },
   "dependencies": {
     "cookie-parser": "^1.4.5",
