@@ -4,6 +4,8 @@
   "description": "Express API template.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
+    "postinstall": "husky install",
+    "release": "standard-version --no-verify",
     "start": "DEBUG=express-api-template:* node ./bin/www"
   },
   "dependencies": {
@@ -11,6 +13,12 @@
     "debug": "^4.3.2",
     "express": "^4.17.1",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "husky": "^7.0.1",
+    "standard-version": "^9.3.1"
   },
   "private": true,
   "license": "MIT"
