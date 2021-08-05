@@ -10,6 +10,7 @@ import { createServer } from 'http';
 
 import app from '../app';
 import { port as rawPort } from '../config';
+// @ts-ignore
 import { name, version } from '../../package.json';
 
 /**

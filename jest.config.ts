@@ -9,6 +9,7 @@ export default {
       statements: 100,
     },
   },
+  modulePathIgnorePatterns: ['<rootDir>/build/'],
   preset: 'ts-jest',
   testEnvironment: 'node',
 };

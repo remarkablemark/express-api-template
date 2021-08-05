@@ -2,8 +2,11 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "module": "commonjs",
+    "outDir": "build",
     "resolveJsonModule": true,
+    "rootDir": "src",
     "strict": true,
     "target": "es6"
-  }
+  },
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts", "jest.config.ts"]
 }
