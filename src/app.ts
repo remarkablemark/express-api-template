@@ -1,4 +1,5 @@
 import express from 'express';
+import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -14,13 +15,17 @@ const app = express();
 /**
  * Middleware.
  */
-/* istanbul ignore next */
-app.use(logger(isProduction ? 'combined' : 'dev', { skip: () => isTest }));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(compression());
 app.use(cookieParser());
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(helmet());
+app.use(
+  logger(/* istanbul ignore next */ isProduction ? 'combined' : 'dev', {
+    skip: () => isTest,
+  })
+);
 
 /**
  * Routes.
