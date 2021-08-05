@@ -5,13 +5,10 @@
  */
 
 import { createServer } from 'http';
-import debug from 'debug';
 
 import app from '../app';
 import { port as rawPort } from '../config';
-import { name } from '../../package.json';
-
-const debugServer = debug(`${name}:server`);
+import { name, version } from '../../package.json';
 
 /**
  * Get port from environment and store in Express.
@@ -92,5 +89,5 @@ function onListening() {
   } else if (address) {
     bind = `port ${address.port}`;
   }
-  debugServer(`Listening on ${bind}`);
+  console.log(`${name}@${version} listening on ${bind}`);
 }
