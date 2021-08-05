@@ -1,0 +1,4 @@
+{
+  "*.{js,ts}": "yarn lint:fix",
+  "*.{css,html,json,md,yml}": "prettier --write"
+}

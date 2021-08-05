@@ -4,6 +4,9 @@
   "description": "Express API template.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "lint:fix": "yarn lint --fix",
+    "lint:tsc": "tsc --noEmit",
     "postinstall": "husky install",
     "release": "standard-version --no-verify",
     "start": "DEBUG=express-api-template:* node ./bin/www"
