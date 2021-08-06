@@ -1,0 +1,25 @@
+name: release-please
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Read package name
+        run: echo ::set-output name=NAME::$(jq -r .name package.json)
+        id: package
+
+      - name: Release
+        uses: GoogleCloudPlatform/release-please-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node
+          package-name: ${{ steps.package.outputs.NAME }}
