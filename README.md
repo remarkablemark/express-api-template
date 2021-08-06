@@ -1,5 +1,7 @@
 # express-api-template
 
+[![build](https://github.com/remarkablemark/express-api-template/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/express-api-template/actions/workflows/build.yml)
+
 Express API template.
 
 ## Prerequisites
