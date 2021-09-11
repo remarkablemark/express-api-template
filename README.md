@@ -7,9 +7,14 @@ Express API template.
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/)
-- [Yarn](https://classic.yarnpkg.com/)
+- [Yarn 1](https://classic.yarnpkg.com/)
 
 ## Install
+
+```sh
+git clone https://github.com/remarkablemark/express-api-template.git
+cd express-api-template
+```
 
 Install the dependencies:
 
