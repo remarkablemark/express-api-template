@@ -28,7 +28,7 @@
     "pm2": "^5.2.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.3",
+    "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
     "@types/compression": "^1.7.2",
     "@types/cookie-parser": "^1.4.3",
