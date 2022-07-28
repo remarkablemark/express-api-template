@@ -1,6 +1,6 @@
 {
   "name": "express-api-template",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "description": "Express API template.",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "build/bin/www.js",
