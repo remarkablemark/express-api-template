@@ -24,7 +24,7 @@ app.use(helmet());
 app.use(
   logger(/* istanbul ignore next */ isProduction ? 'combined' : 'dev', {
     skip: () => isTest,
-  })
+  }),
 );
 
 /**
