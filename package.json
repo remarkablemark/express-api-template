@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
-    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/config-conventional": "^17.8.0",
     "@types/compression": "^1.7.3",
     "@types/cookie-parser": "^1.4.4",
     "@types/cors": "^2.8.14",
