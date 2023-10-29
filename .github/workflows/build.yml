@@ -12,36 +12,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Read .nvmrc
-        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
-        id: nvm
-
-      - name: Use Node.js ${{ steps.nvm.outputs.NODE_VERSION }}
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
-
-      - name: Cache dependencies
-        id: cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-            */*/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock', './yarn.lock') }}
+          cache: npm
+          node-version-file: .nvmrc
 
       - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn --frozen-lockfile --prefer-offline
+        run: npm ci --prefer-offline
 
       - name: Lint commit message
-        run: yarn commitlint --from=HEAD~1
+        run: npx commitlint --from=HEAD~1
 
       - name: Run ESLint
-        run: yarn lint
+        run: npm run lint
 
       - name: Compile TypeScript
-        run: yarn lint:tsc
+        run: npm run lint:tsc
 
       - name: Run tests
-        run: yarn test:ci
+        run: npm run test:ci

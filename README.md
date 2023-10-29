@@ -7,7 +7,7 @@ Express API template.
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/)
-- [Yarn 1](https://classic.yarnpkg.com/)
+- [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ## Install
 
@@ -19,7 +19,7 @@ cd express-api-template
 Install the dependencies:
 
 ```sh
-yarn
+npm install
 ```
 
 ## Environment Variables
@@ -34,7 +34,7 @@ cp .env.example .env
 
 In the project directory, you can run:
 
-### `yarn dev`
+### `npm run dev`
 
 Runs the app in the development mode.
 
@@ -44,19 +44,19 @@ The server will reload if you make edits.
 
 You will also see any errors in the console.
 
-### `yarn start`
+### `npm start`
 
 Runs the app in the production mode.
 
-### `yarn test`
+### `npm test`
 
 Launches the test runner in the interactive watch mode.
 
-### `yarn lint`
+### `npm run lint`
 
 Lints the files.
 
-### `yarn build`
+### `npm run build`
 
 Builds the app for production to the `build` folder.
 
