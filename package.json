@@ -9,7 +9,7 @@
     "clean": "rm -rf build",
     "dev": "DEBUG=express-api-template:* nodemon src/bin/www.ts",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
-    "lint:fix": "yarn lint --fix",
+    "lint:fix": "npm run lint -- --fix",
     "lint:tsc": "tsc --noEmit",
     "postinstall": "husky install",
     "release": "standard-version --no-verify",
