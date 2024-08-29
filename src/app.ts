@@ -1,11 +1,10 @@
-import express from 'express';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
+import type { ErrorRequestHandler } from 'express';
+import express from 'express';
 import helmet from 'helmet';
 import logger from 'morgan';
-
-import type { ErrorRequestHandler } from 'express';
 
 import { isProduction, isTest } from './config';
 import indexRouter from './routes/index';
@@ -44,6 +43,7 @@ app.use((request, response) => {
  */
 // eslint-disable-next-line no-unused-vars
 app.use(((error, request, response, next) => {
+  // eslint-disable-next-line no-console
   console.error(error.stack);
   response.status(500).send('Internal Server Error');
 }) as ErrorRequestHandler);

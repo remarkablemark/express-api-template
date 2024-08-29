@@ -1,8 +1,8 @@
+import type { Router } from 'express';
 import request from 'supertest';
+
 import app from './app';
 import indexRouter from './routes/index';
-
-import type { Router } from 'express';
 
 describe('GET /404', () => {
   it('responds with 404 "Not Found"', async () => {

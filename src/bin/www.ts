@@ -8,10 +8,9 @@
 
 import { createServer } from 'http';
 
+import { name, version } from '../../package.json';
 import app from '../app';
 import { port as rawPort } from '../config';
-// @ts-ignore
-import { name, version } from '../../package.json';
 
 /**
  * Get port from environment and store in Express.
@@ -68,13 +67,17 @@ function onError(error: NodeJS.ErrnoException) {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
+      // eslint-disable-next-line no-console
       console.error(`${bind} requires elevated privileges`);
       process.exit(1);
       break;
+
     case 'EADDRINUSE':
+      // eslint-disable-next-line no-console
       console.error(`${bind} is already in use`);
       process.exit(1);
       break;
+
     default:
       throw error;
   }
@@ -87,10 +90,13 @@ function onError(error: NodeJS.ErrnoException) {
 function onListening() {
   const address = server.address();
   let bind = '';
+
   if (typeof address === 'string') {
     bind = `pipe ${address}`;
   } else if (address) {
     bind = `port ${address.port}`;
   }
+
+  // eslint-disable-next-line no-console
   console.log(`${name}@${version} listening on ${bind}`);
 }
