@@ -33,7 +33,7 @@
     "@eslint/compat": "1.2.9",
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.28.0",
-    "@types/compression": "^1.8.0",
+    "@types/compression": "^1.8.1",
     "@types/cookie-parser": "^1.4.9",
     "@types/cors": "^2.8.18",
     "@types/debug": "^4.1.12",
