@@ -26,6 +26,7 @@ describe('error', () => {
 
   afterAll(() => {
     consoleLogSpy.mockRestore();
+    // @ts-expect-error Argument of type 'Router' is not assignable to parameter of type 'ILayer'
     indexRouter.stack.splice(indexRouter.stack.indexOf(errorRouter), 1);
   });
 
