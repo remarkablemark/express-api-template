@@ -6,10 +6,15 @@ Express API template.
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/)
-- [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+[nvm](https://github.com/nvm-sh/nvm#installing-and-updating):
+
+```sh
+brew install nvm
+```
 
 ## Install
+
+Clone the repository:
 
 ```sh
 git clone https://github.com/remarkablemark/express-api-template.git
@@ -29,6 +34,8 @@ Copy and update the environment variables:
 ```sh
 cp .env.example .env
 ```
+
+Update the **Secrets** in the repository **Settings**.
 
 ## Available Scripts
 
