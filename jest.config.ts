@@ -1,5 +1,6 @@
-/** @type {import('@ts-jest/dist/types').InitialOptionsTsJest} */
-export default {
+import type { Config } from 'jest';
+
+const jestConfig: Config = {
   collectCoverageFrom: ['src/**/*.ts'],
   coverageThreshold: {
     global: {
@@ -13,3 +14,5 @@ export default {
   preset: 'ts-jest',
   testEnvironment: 'node',
 };
+
+export default jestConfig;
