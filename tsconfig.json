@@ -6,7 +6,8 @@
     "resolveJsonModule": true,
     "rootDir": "src",
     "strict": true,
-    "target": "es6"
+    "target": "es6",
+    "incremental": true
   },
   "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts", "jest.config.ts"]
 }
