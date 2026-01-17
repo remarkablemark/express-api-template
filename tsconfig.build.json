@@ -1,0 +1,14 @@
+{
+  "extends": ".",
+  "compilerOptions": {
+    "outDir": "build",
+    "rootDir": "src"
+  },
+  "exclude": [
+    "node_modules",
+    "__mocks__",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "jest.config.ts"
+  ]
+}

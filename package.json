@@ -5,8 +5,8 @@
   "author": "Mark <mark@remarkablemark.org>",
   "main": "build/bin/www.js",
   "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf build",
+    "build": "tsc --project tsconfig.build.json",
+    "clean": "rm -rf build coverage tsconfig*.tsbuildinfo",
     "dev": "DEBUG=express-api-template:* nodemon src/bin/www.ts",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
