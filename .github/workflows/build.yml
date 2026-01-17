@@ -30,8 +30,11 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
-      - name: Compile TypeScript
+      - name: Type check
         run: npm run lint:tsc
 
       - name: Run tests
         run: npm run test:ci
+
+      - name: Build app
+        run: npm run build
