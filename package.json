@@ -24,7 +24,7 @@
     "express": "5.2.1",
     "helmet": "8.2.0",
     "morgan": "1.11.0",
-    "pm2": "7.0.1"
+    "pm2": "7.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "21.1.0",
